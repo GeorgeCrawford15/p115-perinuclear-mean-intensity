@@ -1,7 +1,5 @@
 # periMI: Perinuclear Mean Intensity Analysis of p115
 
----
-
 ## Table of Contents
 
 1. [Overview](#overview)  
