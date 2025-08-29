@@ -1,7 +1,5 @@
 # periMI: Perinuclear Mean Intensity Analysis of p115
 
-**Note:** This repository contains the periMI analysis pipeline. It is intended for postdoctoral use and may be cited in future publications.  
-
 ---
 
 ## Table of Contents
