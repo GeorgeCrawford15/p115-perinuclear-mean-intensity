@@ -8,8 +8,7 @@
 4. [Installation](#installation)  
 5. [Usage](#usage)  
 6. [Configuration](#configuration)  
-7. [License](#license)  
-8. [Citation](#citation)  
+7. [License](#license)
 
 ---
 
@@ -80,24 +79,13 @@ jupyter lab
 
 ## Configuration
 
-- All adjustable parameters are contained in the `PipelineConfig` dataclass, which controls image selection, regions of interest, and measurement settings.
+- All adjustable parameters are contained in the `PipelineConfig` dataclass, which controls image selection, filtering, and measurement settings.
 - Users can create multiple configuration instances (`cfg_1`, `cfg_2`, etc.) to analyze different conditions.
 
 ---
 
 ## License
 
-This repository is licensed under the MIT License. See [LICENSE(LICENSE)] for details.
+This repository is licensed under the MIT License. See [LICENSE](LICENSE) for details.
 - Users may freely use, modify, and redistribute the code.
 - The copyright notice must be preserved in redistributed copies.
-
----
-
-## Citation
-
-- Once the associated manuscript is published, please cite the paper when using this code.
-- Placeholder for citation:
-
-```
-Author(s), “Title,” Journal, Year. DOI
-```
