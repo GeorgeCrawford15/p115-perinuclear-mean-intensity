@@ -1,0 +1,74 @@
+# ------------------------------
+# System files
+# ------------------------------
+.DS_Store             # macOS
+Thumbs.db             # Windows
+
+# ------------------------------
+# Python artifacts
+# ------------------------------
+__pycache__/
+*.py[cod]
+*.so
+
+# ------------------------------
+# Virtual environments
+# ------------------------------
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+
+# ------------------------------
+# Jupyter Notebook / IPython
+# ------------------------------
+.ipynb_checkpoints/
+*.nbconvert.ipynb
+*.out.ipynb
+*.bak
+
+# ------------------------------
+# Project-specific data (untracked)
+# ------------------------------
+cell-data/
+analyzed-cell-data/
+
+# ------------------------------
+# IDE/editor settings
+# ------------------------------
+.vscode/
+*.swp
+*.tmp
+
+# ------------------------------
+# Python packaging/build
+# ------------------------------
+*.egg
+*.egg-info/
+dist/
+build/
+
+# ------------------------------
+# Logs, database, runtime files
+# ------------------------------
+*.log
+*.pid
+*.sqlite3
+
+# ------------------------------
+# Secrets / environment files
+# ------------------------------
+.env
+*.env
+
+# ------------------------------
+# Testing / type checking
+# ------------------------------
+.pytest_cache/
+.mypy_cache/
+
+# ------------------------------
+# Optional: Jupyter hidden checkpoint files
+# ------------------------------
+.*.ipynb_checkpoints/
