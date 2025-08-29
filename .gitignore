@@ -1,8 +1,6 @@
-# ------------------------------
-# System files
-# ------------------------------
-**/.DS_Store          # macOS
-Thumbs.db             # Windows
+# Ignore system files
+**/.DS_Store
+Thumbs.db
 
 # ------------------------------
 # Python artifacts
