@@ -71,7 +71,8 @@ jupyter lab
 - `img_sets`: path to your top-level folder containing image sets
 - `output_folder_path`: path to save Excel outputs
 - `cfg_1`, `cfg_2`, etc.: pipeline configuration objects. Include the specific parameter values you want instead of the following values in the default settings:
-  - `show_viewer: bool = True` &rarr; Generates a Napari window for each image set. Toggling this to False is recommended when analyzing many image sets.
+  - `show_viewer: bool = True`
+    Generates a Napari window for each image set. Toggling this to False is recommended when analyzing many image sets.
   - `nucleus_plane: int = 3` &rarr; Keep between 1 and 6. Specifies the z-plane index (`z<number>`) of the desired nucleus image. p115 analysis is done on 3 p115 images: 1 plane below the nucleus image, on the same plane as the nucleus image, and 1 plane above the nucleus image.
   - `erosion_intensity: int = 1` &rarr; Set to 2 or 3 for more intense image erosion. 
   - `sigma_est_toggle: bool = True` &rarr; Estimated noise standard deviation. This value multiplies the filter strength to provide a tailored denoising strength. Keep this as False if you don't want it to influence denoising and want more manual control over the denoising strength.
