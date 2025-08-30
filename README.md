@@ -71,22 +71,22 @@ jupyter lab
 - `img_sets`: path to your top-level folder containing image sets
 - `output_folder_path`: path to save Excel outputs
 - `cfg_1`, `cfg_2`, etc.: pipeline configuration objects. Include the specific parameter values you want instead of the values in the default settings:
-  - show_viewer: bool = True &rarr Generates a Napari window for each image set. Toggling this to False is recommended when analyzing many image sets.
-  - nucleus_plane: int = 3 &rarr Keep between 1 and 6. Specifies the z-plane index (`z<number>`) of the desired nucleus image. p115 analysis is done on 3 p115 images: 1 plane below the nucleus image, on the same plane as the nucleus image, and 1 plane above the nucleus image.
-  - erosion_intensity: int = 1 &rarr Set to 2 or 3 for more intense image erosion. 
-  - sigma_est_toggle: bool = True &rarr Estimated noise standard deviation. This value multiplies the filter strength to provide a tailored denoising strength. Keep this as False if you don't want it to influence denoising and want more manual control over the denoising strength.
-  - denoising_strength: float = 0.8 &rarr This number will be multiplied by sigma_est if sigma_est is set to True, and thus the denoising strength will be 80% of the standard deviation (or 70% if you change this number to 0.7, and so on). Otherwise, this number will solely define the denoising strength.
-  - denoising_patch_size: int = 11 &rarr Larger value = captures more context; better denoising but loses fine detail (which might not matter in some images, but may cause bad nucleus masking in other images with darker nucleus pixels).
-  - denoising_patch_distance: int = 12 &rarr Larger value = searches wider area, so likely better denoising but slower processing.
-  - denoising_fast_mode: bool = True &rarr Make False for slower but potentially more accurate denoising.
-  - nucleus_mask_threshold: float = 0.05 &rarr Keep between 0 and 1. Specifies the minimum intensity a pixel must have to be considered a part of a nucleus. 
-  - nucleus_area_threshold: int = 500 &rarr Removes regions in the nucleus mask that are smaller than 500 pixels.
-  - desired_donut_width_um: float = 4.5 &rarr Specifies each cell's inner donut width in microns. Tweaking this value will likely change the analysis results drastically.
-  - desired_outer_donut_width_um: float = 1.5 &rarr Specifies each cell's outer donut width in microns. Tweaking this value will likely change the analysis results drastically.
-  - overlap_filter: str = 'lenient'  # or 'strict' &rarr Setting to 'lenient' deletes all cell regions whose outer donuts overlap with other regions' inner donuts, and vice versa (recommended). Setting to 'strict' deletes all cell regions that overlap.
-  - lower_transfection_intensity_threshold: float = 0.05 &rarr Keep between 0 and 1. Cell regions whose inner donuts have mean transfection intensities lower than this number are removed.
-  - upper_transfection_intensity_threshold: float = 0.2 &rarr Keep between 0 and 1. Cell regions whose inner donuts have mean transfection intensities higher than this number are removed.
-  - p115_area_intensity_threshold: float = 0.05 &rarr Keep between 0 and 1. Pixels in each analyzed p115 image whose intensities are lower than this number are not considered when calculating the total area of p115 (in pixels) for each mask in each cell region.
+  - show_viewer: bool = True &rarr; Generates a Napari window for each image set. Toggling this to False is recommended when analyzing many image sets.
+  - nucleus_plane: int = 3 &rarr; Keep between 1 and 6. Specifies the z-plane index (`z<number>`) of the desired nucleus image. p115 analysis is done on 3 p115 images: 1 plane below the nucleus image, on the same plane as the nucleus image, and 1 plane above the nucleus image.
+  - erosion_intensity: int = 1 &rarr; Set to 2 or 3 for more intense image erosion. 
+  - sigma_est_toggle: bool = True &rarr; Estimated noise standard deviation. This value multiplies the filter strength to provide a tailored denoising strength. Keep this as False if you don't want it to influence denoising and want more manual control over the denoising strength.
+  - denoising_strength: float = 0.8 &rarr; This number will be multiplied by sigma_est if sigma_est is set to True, and thus the denoising strength will be 80% of the standard deviation (or 70% if you change this number to 0.7, and so on). Otherwise, this number will solely define the denoising strength.
+  - denoising_patch_size: int = 11 &rarr; Larger value = captures more context; better denoising but loses fine detail (which might not matter in some images, but may cause bad nucleus masking in other images with darker nucleus pixels).
+  - denoising_patch_distance: int = 12 &rarr; Larger value = searches wider area, so likely better denoising but slower processing.
+  - denoising_fast_mode: bool = True &rarr; Make False for slower but potentially more accurate denoising.
+  - nucleus_mask_threshold: float = 0.05 &rarr; Keep between 0 and 1. Specifies the minimum intensity a pixel must have to be considered a part of a nucleus. 
+  - nucleus_area_threshold: int = 500 &rarr; Removes regions in the nucleus mask that are smaller than 500 pixels.
+  - desired_donut_width_um: float = 4.5 &rarr; Specifies each cell's inner donut width in microns. Tweaking this value will likely change the analysis results drastically.
+  - desired_outer_donut_width_um: float = 1.5 &rarr; Specifies each cell's outer donut width in microns. Tweaking this value will likely change the analysis results drastically.
+  - overlap_filter: str = 'lenient' &rarr; Setting to 'lenient' deletes all cell regions whose outer donuts overlap with other regions' inner donuts, and vice versa (recommended). Setting to 'strict' deletes all cell regions that overlap.
+  - lower_transfection_intensity_threshold: float = 0.05 &rarr; Keep between 0 and 1. Cell regions whose inner donuts have mean transfection intensities lower than this number are removed.
+  - upper_transfection_intensity_threshold: float = 0.2 &rarr; Keep between 0 and 1. Cell regions whose inner donuts have mean transfection intensities higher than this number are removed.
+  - p115_area_intensity_threshold: float = 0.05 &rarr; Keep between 0 and 1. Pixels in each analyzed p115 image whose intensities are lower than this number are not considered when calculating the total area of p115 (in pixels) for each mask in each cell region.
 
 3. Run the notebook cells sequentially.
 *Currently, the pipeline is designed for interactive use via Jupyter Notebook only.*
